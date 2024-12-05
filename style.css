@@ -61,7 +61,7 @@ header img:hover {
   opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
 }
 
-.header-nav button {
+.hader-button {
   margin-left: 40px; /* ボタンとリストの間隔 */
   padding: 10px 16px;
   border-radius: 30px;
@@ -70,9 +70,10 @@ header img:hover {
   color: #ffffff;
   min-width: 120px;
   transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
+  text-decoration: none;
 }
 
-.header-nav button:hover {
+.hader-button:hover {
   opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
 }
 
@@ -103,7 +104,7 @@ main {
   z-index: 1;
 }
 
-.main_contents button {
+.main_button {
   margin-left: 8%; /* ボタンも同様に左寄せ */
   margin-bottom: 15px;
   padding: 20px 160px;
@@ -115,9 +116,10 @@ main {
   transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
   font-size: 15px;
   z-index: 1;
+  text-decoration: none;
 }
 
-.main_contents button:hover {
+.main_button:hover {
   opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
 }
 
@@ -168,7 +170,7 @@ main {
 
 
 /* --------------------------------------
-メディアクエリ:スマートフォン(767px以下)
+メディアクエリ:スマートフォン(390px以下)
 -------------------------------------- */
 @media only screen and (max-width: 390px) {
   /* ヘッダー */
@@ -219,16 +221,17 @@ main {
     font-size: 12px; /* フォントサイズを小さく */
   }
 
-  .main_contents button {
+  .main_button {
     position: relative;
     top: 180px;
     margin: 0 auto;
     padding: 10px 20px; /* パディングを調整 */
-    font-size: 14px; /* フォントサイズを小さく */
-    width: 358px; /* ボタンの幅を固定 */
-    height: 64px;
+    font-size: 16px; /* フォントサイズを小さく */
+    width: 330px; /* ボタンの幅を固定 */
+    height: 32px;
     white-space: nowrap; /* テキストを改行させない */
     text-align: center; /* テキストを中央揃え */
+    line-height: 32px;
   }
 
   .main_img_icon {
@@ -260,13 +263,10 @@ main {
     height: 240px; /* 親要素の高さの比率 */
     top: -10px;
   }
-
-  section {
-    background-color: 	#33CC99;
-    height: 800px;
-  }
 }
-
+/* --------------------------------------
+メディアクエリ:スマートフォン(391px以上〜767px以下)
+-------------------------------------- */
 @media only screen and (min-width: 391px) and (max-width: 767px) {
 /* ヘッダー */
   header img {
@@ -309,19 +309,21 @@ main {
   .main_subtext {
     position: relative;
     top: 200px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 0;
+    margin-right: 16px;
     color: #666; /* 文字色を薄く */
     font-size: 12px; /* フォントサイズを小さく */
   }
 
-  .main_contents button {
+  .main_button {
     position: relative;
     top: 180px;
-    margin-left: 0 auto;
+    margin: 0 auto;
     padding: 20px 85px;
     font-size: 16px;
-    width: 360px;
+    width: 330pxpx;
     white-space: nowrap; /* テキストを改行させない */
     text-align: center; /* テキストを中央揃え */
   }
@@ -354,11 +356,6 @@ main {
     width: 290px; /* 横幅を自動調整 */
     height: 265px; /* 親要素の高さの比率 */
     top: -10px;
-  }
-
-  section {
-    background-color: 	#33CC99;
-    height: 800px;
   }
   }
 
@@ -405,10 +402,4 @@ main {
   .main_img_oblique_circle {
     z-index: -2;
   }
-
-  section {
-    background-color: 	#33CC99;
-    height: 800px;
-  }
-
   }
