@@ -1,6 +1,162 @@
-h1 {
-  color: #364e96;
-  padding: 5px 0;
-  border-top: solid 6px #364e96;
-  border-bottom: solid 6px #364e96;
+/* 全体のマージンとパディングのリセット */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  box-shadow: 0px 7px 7px -5px rgba(0, 0, 0, 0.12);
+}
+
+
+
+header img {
+  margin-left: 20px;
+  width: 185px;
+  height: 20px;
+  transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
+}
+
+header img:hover {
+  opacity: 0.7; /* カーソルを合わせると画像が70%の不透明度に */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.hedader-nav-lists {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px; /* リスト間の間隔 */
+}
+
+.header-nav-list {
+  text-align: center;
+}
+
+.header-nav-list a {
+  text-decoration: none; /*　下線の打ち消し */
+  color: #333;
+  text-align: center;
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
+}
+
+.header-nav-list a:hover {
+  opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
+}
+
+.header-nav button {
+  margin-left: 40px; /* ボタンとリストの間隔 */
+  padding: 10px 16px;
+  border-radius: 30px;
+  background-color: #F79315;
+  border: none;
+  color: #ffffff;
+  min-width: 120px;
+  transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
+}
+
+.header-nav button:hover {
+  opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
+}
+
+
+/* メインコンテンツ */
+main {
+  position: relative;
+  height: 730px;
+  overflow: hidden;
+}
+
+.main_contents {
+  max-width: 1200px; /* コンテンツの最大幅を設定 */
+  margin: 0 auto; /* 中央寄せの基本 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 左寄せ */
+}
+
+.main_text {
+  font-size: 42px;
+  letter-spacing: 0.02em;
+  text-align: left; /* テキストを左寄せ */
+  margin-left: 8%; /* 画面の左から10%の位置に配置 */
+  margin-top: 18%;
+  line-height: 1.5; /* 行間を調整 */
+  margin-bottom: 15px;
+}
+
+.main_contents button {
+  margin-left: 8%; /* ボタンも同様に左寄せ */
+  margin-bottom: 15px;
+  padding: 20px 160px;
+  border-radius: 30px;
+  background-color: #F79315;
+  border: none;
+  color: #ffffff;
+  min-width: 120px;
+  transition: opacity 0.3s ease; /* opacityの不透明度の遷移速度調整 */
+  font-size: 15px;
+}
+
+.main_contents button:hover {
+  opacity: 0.7; /* カーソルを合わせると色が70%の不透明度に */
+}
+
+.main_subtext {
+  margin-left: 8%; /* サブテキストも左寄せ */
+  color: #666; /* 文字色を薄く */
+  font-size: 11px; /* フォントサイズを小さく */
+}
+
+.main_img_left_triangle {
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  top: 0px;
+}
+
+.main_img_right_triangle {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  right: 0;
+  top: 340px;
+}
+
+.main_img_oblique_circle {
+  position: absolute;
+  top: 73px;
+  left: -50px;
+}
+
+.main_img_male {
+  width: auto; /* 横幅を自動調整 */
+  height: 90%; /* 親要素の高さの比率 */
+  position: absolute;
+  top: -90px;
+  right: 0; /* 親要素の右端に固定 */
+  object-fit: cover; /* 画像のサイズを親要素に合わせる */
+}
+
+.main_img_icon {
+  position: absolute;
+  /* width: 100px;
+  height: 100px; */
+  top: 120px;
+  left: 895px;
 }
